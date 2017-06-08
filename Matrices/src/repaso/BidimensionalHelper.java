@@ -27,5 +27,34 @@ public class BidimensionalHelper {
 		
 		return arreglo;
 	}
+	
+	public void motrarNotasAlumno( String[] nombreAlumnos, int[][] notas, int nAlumnos, int nEvaluaiones ){
+		
+		for (int i = 0; i < nAlumnos; i++) {
+			
+			for (int j = 0; j < nEvaluaiones; j++) {
+				
+				System.out.println( nombreAlumnos[i] + " evaluacion # [" + j + "] : " + notas[ i ][ j ] );
+				
+			}
+			
+		}
+		
+	}
+	
+	public int buscarAlumnoPorNombre( String[] nombresAlumnos, String nombre ){
+		
+		int posicion = 0;
+		
+		for (int i = 0; i < nombresAlumnos.length; i++) {
+			
+			if ( nombresAlumnos[ i ].equalsIgnoreCase( nombre ) ) {
+				posicion = i;
+			}
+		}
+		
+		return posicion;
+		
+	}
 
 }
